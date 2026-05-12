@@ -1,0 +1,24 @@
+---
+// src/components/StatsSection.astro
+import { STATS } from "@/data/beverages";
+---
+
+<section aria-label="Dashboard statistics">
+  <div
+    class="grid gap-4"
+    style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));"
+  >
+    {STATS.map((s) => (
+      <div class="stat-card animate-fade-in">
+        <div class="text-[26px] mb-3" aria-hidden="true">{s.icon}</div>
+        <p class="font-sans text-[11px] text-brew-muted uppercase tracking-[0.08em] mb-[6px]">
+          {s.label}
+        </p>
+        <p class="font-serif text-[22px] font-bold text-brew-espresso mb-[4px]">
+          {s.value}
+        </p>
+        <p class="font-sans text-[12px] text-brew-accent-lt">{s.change}</p>
+      </div>
+    ))}
+  </div>
+</section>

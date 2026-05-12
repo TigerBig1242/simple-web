@@ -1,0 +1,75 @@
+---
+// src/pages/index.astro
+import BaseLayout   from "@/layouts/BaseLayout.astro";
+import Header       from "@/components/Header.astro";
+import StatsSection from "@/components/StatsSection.astro";
+
+// React islands
+import SearchBar       from "@/components/SearchBar";
+import CartButton      from "@/components/CartButton";
+import CategoryFilter  from "@/components/CategoryFilter";
+import BeverageGrid    from "@/components/BeverageGrid";
+import CartPanel       from "@/components/CartPanel";
+---
+
+<BaseLayout
+  title="Atelier Brew — Specialty Café"
+  description="Premium café ordering. Handcrafted beverages, curated with care."
+>
+  <!-- ─── Top navigation ─────────────────────────────────── -->
+  <Header/>
+
+  <!-- Inject React islands into header slots -->
+  <!-- <SearchBar  client:load />
+  <CartButton client:load /> -->
+
+  <!-- ─── Main content ──────────────────────────────────── -->
+  <!-- <main class="max-w-[1200px] mx-auto px-6 py-10 pb-24"> -->
+  <main class="max-w-300 mx-auto px-6 py-10 pb-24">
+
+    <!-- Hero greeting -->
+    <section class="mb-12" aria-label="Welcome">
+      <h1 class="font-serif text-[42px] sm:text-[52px] font-semibold text-brew-espresso
+                 leading-[1.12] mb-3">
+        Good morning,<br />
+        <em class="not-italic text-brew-accent-lt">welcome back.</em>
+      </h1>
+      <p class="font-sans text-[15px] font-light text-brew-muted max-w-md leading-relaxed">
+        Your daily ritual, curated with care.<br />
+        What shall we brew for you today?
+      </p>
+    </section>
+
+    <!-- Dashboard stat cards (static Astro) -->
+    <div class="mb-14">
+      <StatsSection />
+    </div>
+
+    <!-- Category filter (React island) -->
+    <div class="mb-8">
+      <CategoryFilter client:load />
+    </div>
+
+    <!-- Beverage grid (React island — fully reactive) -->
+    <BeverageGrid client:load />
+
+  </main>
+
+  <!-- Cart panel (React island — portal overlay) -->
+  <CartPanel client:load />
+
+  <!-- Inline header slot mount -->
+  <script>
+    // Mount React islands into header placeholder divs
+    // (Astro handles this automatically via client:load directive above)
+    // Additional scroll-based topbar shadow handled in Header.astro
+  </script>
+</BaseLayout>
+
+<style>
+  /* Page-level animation stagger for stat cards */
+  :global(.stat-card:nth-child(1)) { animation-delay: 0ms;   }
+  :global(.stat-card:nth-child(2)) { animation-delay: 60ms;  }
+  :global(.stat-card:nth-child(3)) { animation-delay: 120ms; }
+  :global(.stat-card:nth-child(4)) { animation-delay: 180ms; }
+</style>

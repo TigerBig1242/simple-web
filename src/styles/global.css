@@ -1,0 +1,157 @@
+/* ─── Fonts ─────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ─── Tailwind directives ────────────────────────────────── */
+@import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* @theme {
+  --color-brew-bg: #f5f1ea;
+  --color-brew-dark: #3b2f2f;
+  --color-brew-cream: #FDFBD4;
+
+  --color-brew-muted: #8b735f;
+  --color-brew-muted-lt: #6F4E37;
+
+  --color-brew-card: #ffffff;
+  --color-brew-border: #e7ded4;
+  --color-brew-espresso: #654321;
+  --color-brew-accent: #b08968;
+
+  --shadow-card: 0 4px 20px rgba(0,0,0,0.05);
+  --shadow-card-hover: 0 10px 30px rgba(0,0,0,0.12);
+} */
+
+@theme {
+  /* Colors */
+  --color-brew-bg: #f5f1ea;
+  --color-brew-dark: #3b2f2f;
+
+  --color-brew-card: #ffffff;
+  --color-brew-border: #e7ded4;
+
+  --color-brew-cream: #FDFBD4;
+  --color-brew-cream-light: #fffdf6;
+
+  --color-brew-muted: #8b735f;
+  --color-brew-muted-lt: #6F4E37;
+
+  --color-brew-espresso: #654321;
+
+  --color-brew-accent: #b08968;
+  --color-brew-accent-lt: #d6b89c;
+
+  /* Typography */
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "DM Sans", sans-serif;
+
+  /* Shadows */
+  --shadow-card: 0 4px 20px rgba(0,0,0,0.05);
+  --shadow-card-hover: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* ─── Base ───────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brew-bg text-brew-dark font-sans antialiased;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar          { width: 5px; height: 5px; }
+::-webkit-scrollbar-track    { background: transparent; }
+::-webkit-scrollbar-thumb    { @apply bg-brew-cream rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-brew-muted-lt; }
+
+/* ─── Components ─────────────────────────────────────────── */
+@layer components {
+
+  /* Card */
+  .brew-card {
+    @apply bg-brew-card border border-brew-border rounded-2xl overflow-hidden
+           shadow-card transition-all duration-200 ease-out;
+  }
+  .brew-card:hover {
+    @apply -translate-y-1 shadow-card-hover;
+  }
+
+  /* Button primary */
+  .btn-primary {
+    @apply bg-brew-espresso text-brew-bg font-sans text-[13px] font-medium
+           rounded-[10px] px-[18px] py-[9px] border-0 cursor-pointer
+           transition-all duration-150 tracking-wide;
+  }
+  .btn-primary:hover {
+    @apply bg-brew-accent scale-[1.03];
+  }
+  .btn-primary:active {
+    @apply scale-[0.98];
+  }
+
+  /* Category pill */
+  .cat-pill {
+    @apply border border-brew-border bg-transparent text-brew-muted
+           rounded-full px-[18px] py-[8px] font-sans text-[13px]
+           cursor-pointer transition-all duration-150 whitespace-nowrap;
+  }
+  .cat-pill:hover:not(.active) {
+    @apply bg-brew-cream border-brew-accent-lt;
+  }
+  .cat-pill.active {
+    @apply bg-brew-espresso text-brew-bg border-brew-espresso;
+  }
+
+  /* Search input */
+  .brew-search {
+    @apply bg-brew-card border border-brew-border rounded-xl
+           py-[10px] pl-10 pr-4 font-sans text-sm text-brew-dark
+           outline-none transition-colors duration-150 w-[240px];
+    @apply w-[240px];
+  }
+  .brew-search:focus {
+    @apply border-brew-accent-lt;
+  }
+
+  /* Stat card */
+  .stat-card {
+    @apply bg-brew-card border border-brew-border rounded-2xl p-5 shadow-card;
+  }
+
+  /* Badge */
+  .brew-badge {
+    @apply inline-block px-[10px] py-[3px] rounded-full text-[11px]
+           font-medium font-sans tracking-wide shrink-0;
+  }
+
+  /* Qty button */
+  .qty-btn {
+    @apply bg-brew-cream-light border border-brew-border rounded-lg
+           w-7 h-7 text-base cursor-pointer flex items-center justify-center
+           transition-colors duration-150;
+  }
+  .qty-btn:hover {
+    @apply bg-brew-cream;
+  }
+
+  /* Section divider */
+  .section-divider {
+    @apply flex items-center gap-4 my-8;
+  }
+  .section-divider::after {
+    content: '';
+    @apply flex-1 h-px bg-brew-border;
+  }
+}

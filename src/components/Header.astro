@@ -1,0 +1,63 @@
+---
+// src/components/Header.astro
+// Static shell — interactive cart button wired via React island (CartButton)
+import SearchBar from "./SearchBar";
+import CartButton from "./CartButton";
+---
+
+<header
+  id="topbar"
+  class="sticky top-0 z-50 bg-brew-bg/90 backdrop-blur-md border-b border-brew-border transition-shadow duration-300"
+>
+  <div class="max-w-[1200px] mx-auto px-6 h-[68px] flex items-center gap-6">
+  <!-- <div class="max-w-300 mx-auto px-6 h-17 flex items-center gap-6"> -->
+
+    <!-- Brand -->
+    <a href="/" class="flex items-center gap-3 no-underline shrink-0">
+      <span class="text-[28px] leading-none">☕</span>
+      <div class="leading-none">
+        <div class="font-serif text-[22px] font-semibold text-brew-espresso leading-tight">
+          Atelier Brew
+        </div>
+        <div class="font-sans text-[10px] text-brew-muted tracking-[0.14em] uppercase">
+          Specialty Café
+        </div>
+      </div>
+    </a>
+
+    <!-- Spacer -->
+    <div class="flex-1"></div>
+
+    <!-- Search  (React island for interactivity) -->
+    <!-- <div id="search-root"></div> -->
+     <div class="flex items-center">
+      <SearchBar client:load />
+    </div>
+
+    <!-- Cart button (React island) -->
+    <!-- <div id="cart-btn-root"></div> -->
+     <div class="flex items-center">
+      <CartButton client:load />
+    </div>
+
+    <!-- Profile avatar -->
+    <button
+      aria-label="Profile"
+      class="hidden sm:flex w-9 h-9 rounded-full bg-brew-cream border border-brew-border
+             items-center justify-center text-base cursor-pointer
+             hover:bg-brew-cream-light transition-colors duration-150"
+    >
+      👤
+    </button>
+  </div>
+</header>
+
+<!-- Scroll shadow -->
+<script>
+  const bar = document.getElementById("topbar");
+  if (bar) {
+    window.addEventListener("scroll", () => {
+      bar.classList.toggle("shadow-md", window.scrollY > 8);
+    });
+  }
+</script>
