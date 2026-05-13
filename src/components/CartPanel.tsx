@@ -183,7 +183,7 @@ let content;
                       {item.name}
                     </p>
                     <p className="font-sans text-[12px] text-brew-muted">
-                      ${item.price.toFixed(2)} each
+                      {item.price.toFixed(2)} bath
                     </p>
                   </div>
  
@@ -210,7 +210,7 @@ let content;
  
                   {/* Line total */}
                   <span className="font-sans text-[13px] font-medium w-12 text-right shrink-0">
-                    ${(item.price * item.qty).toFixed(2)}
+                    {(item.price * item.qty).toFixed(2)}
                   </span>
  
                   {/* Remove */}
@@ -239,7 +239,7 @@ let content;
               </p>
               <div className="flex justify-between mb-2">
                 <span className="font-sans text-sm text-brew-muted">Subtotal</span>
-                <span className="font-sans text-sm">${totalPrice.toFixed(2)}</span>
+                <span className="font-sans text-sm">{totalPrice.toFixed(2)} bath</span>
               </div>
               <div className="flex justify-between mb-3">
                 <span className="font-sans text-sm text-brew-muted">Service charge</span>
@@ -251,7 +251,7 @@ let content;
                   Total
                 </span>
                 <span className="font-serif text-[22px] font-bold text-brew-espresso">
-                  ${totalPrice.toFixed(2)}
+                  {totalPrice.toFixed(2)} bath
                 </span>
               </div>
             </div>
@@ -263,7 +263,7 @@ let content;
                          font-medium rounded-xl py-4 border-0 cursor-pointer
                          hover:bg-brew-accent transition-colors duration-150"
             >
-              Place Order · ${totalPrice.toFixed(2)}
+              Place Order · {totalPrice.toFixed(2)} bath
             </button>
             <p className="font-sans text-center text-[12px] text-brew-muted mt-3">
               Estimated ready in 8–12 minutes ☕

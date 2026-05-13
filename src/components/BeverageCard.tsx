@@ -43,7 +43,12 @@ export default function BeverageCard({ bev }: Props) {
                    group-hover:scale-105"
         aria-hidden="true"
       >
-        {bev.emoji}
+        {/* {bev.emoji} */}
+        <img 
+          src={bev.image} 
+          alt={bev.name} 
+          className="w-full h-50 object-cover transition-transform duration-300 group-hover:scale-105" 
+        />
       </div>
 
       {/* Content */}
@@ -86,7 +91,7 @@ export default function BeverageCard({ bev }: Props) {
         {/* Price + Add row */}
         <div className="flex items-center justify-between">
           <span className="font-serif text-[22px] font-bold text-brew-espresso">
-            ${bev.price.toFixed(2)}
+            {bev.price.toFixed(2)} bath
           </span>
           <button
             onClick={handleAdd}
