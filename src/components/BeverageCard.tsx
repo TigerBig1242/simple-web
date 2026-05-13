@@ -36,7 +36,7 @@ export default function BeverageCard({ bev }: Props) {
 
   return (
     <article className="brew-card group animate-fade-in" aria-label={bev.name}>
-      {/* Emoji visual */}
+      {/* Image visual */}
       <div
         className="bg-brew-cream-light text-center text-[52px] leading-none
                    py-6 px-5 select-none transition-transform duration-300
@@ -45,7 +45,7 @@ export default function BeverageCard({ bev }: Props) {
       >
         {/* {bev.emoji} */}
         <img 
-          src={bev.image} 
+          src={`${import.meta.env.BASE_URL}${bev.image}`} 
           alt={bev.name} 
           className="w-full h-50 object-cover transition-transform duration-300 group-hover:scale-105" 
         />
