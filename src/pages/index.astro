@@ -9,7 +9,8 @@ import SearchBar       from "@/components/SearchBar";
 import CartButton      from "@/components/CartButton";
 import CategoryFilter  from "@/components/CategoryFilter";
 import BeverageGrid    from "@/components/BeverageGrid";
-import CartPanel       from "@/components/CartPanel";
+// import CartPanel       from "@/components/CartPanel";
+import CartPanels       from "@/components/CartPanels";
 ---
 
 <BaseLayout
@@ -56,7 +57,7 @@ import CartPanel       from "@/components/CartPanel";
   </main>
 
   <!-- Cart panel (React island — portal overlay) -->
-  <CartPanel client:load />
+  <CartPanels client:load />
 
   <!-- Inline header slot mount -->
   <script>
