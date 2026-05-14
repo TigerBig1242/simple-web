@@ -70,7 +70,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🫖",
     desc: "Bergamot-forward with a delicate floral finish",
     badge: "Bestseller",
-    image: "simple-web/image/grey-royale.jpg",
+    image: "images/grey-royale.jpg",
   },
   {
     id: 2,
@@ -82,7 +82,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🌸",
     desc: "Hand-rolled leaves blooming with fresh jasmine",
     badge: null,
-    image: "simple-web/image/jasmine-pearl.jpg",
+    image: "images/jasmine-pearl.jpg",
   },
   {
     id: 3,
@@ -94,7 +94,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🍵",
     desc: "Roasted Japanese green tea, smoky and deeply warm",
     badge: "New",
-    image: "public/image/matcha-coconut.webp",
+    image: "images/matcha-coconut.webp",
   },
   {
     id: 4,
@@ -106,7 +106,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🌼",
     desc: "Golden chamomile with subtle wild-honey undertones",
     badge: null,
-    image: "public/image/milk-matcha.jpg",
+    image: "images/milk-matcha.jpg",
   },
 
   // Coffee
@@ -120,7 +120,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "☕",
     desc: "Ethiopian Yirgacheffe — bright, citrusy & complex",
     badge: "Chef's Pick",
-    image: "public/image/ice-americano.webp",
+    image: "images/ice-americano.webp",
   },
   {
     id: 6,
@@ -132,7 +132,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🧊",
     desc: "24-hour slow steep, silky smooth and low-acid",
     badge: null,
-    image: "public/image/honey-americano.webp",
+    image: "images/honey-americano.webp",
   },
   {
     id: 7,
@@ -144,7 +144,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "⚡",
     desc: "Double-shot intensity with rich golden crema",
     badge: null,
-    image: "public/image/honey-lime-americano.webp",
+    image: "images/honey-lime-americano.webp",
   },
   {
     id: 8,
@@ -156,7 +156,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🫗",
     desc: "Full-bodied brew with deep chocolate and oak notes",
     badge: null,
-    image: "public/image/orange-americano.webp",
+    image: "images/orange-americano.webp",
   },
 
   // Milk Coffee
@@ -170,7 +170,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🥛",
     desc: "Equal parts espresso and warm silky milk",
     badge: "Favourite",
-    image: "public/image/latte.webp",
+    image: "images/latte.webp",
   },
   {
     id: 10,
@@ -182,7 +182,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🌾",
     desc: "Creamy oat milk kissed with fine microfoam art",
     badge: "Popular",
-    image: "public/image/cappuccino.webp  ",
+    image: "images/cappuccino.webp  ",
   },
   {
     id: 11,
@@ -194,7 +194,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "💜",
     desc: "Floral lavender with raw honey drizzle on steamed milk",
     badge: "New",
-    image: "public/image/macchiato.webp",
+    image: "images/macchiato.webp",
   },
   {
     id: 12,
@@ -206,7 +206,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🥛",
     desc: "Equal parts espresso and warm silky milk",
     badge: "Favourite",
-    image: "public/image/cold-brew-oat-milk.webp",
+    image: "images/cold-brew-oat-milk.webp",
   },
 
   // Signature
@@ -220,7 +220,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🌺",
     desc: "Cherry blossom syrup with effervescent yuzu soda",
     badge: "Signature",
-    image: "public/image/cold-brew-orange.webp",
+    image: "images/cold-brew-orange.webp",
   },
   {
     id: 14,
@@ -232,7 +232,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🖤",
     desc: "Activated charcoal latte with whipped vanilla cream",
     badge: "Signature",
-    image: "public/image/americano-coconut.webp",
+    image: "images/americano-coconut.webp",
   },
   {
     id: 15,
@@ -244,7 +244,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "✨",
     desc: "Anti-inflammatory spiced blend with coconut milk",
     badge: "Signature",
-    image: "public/image/refreshing-cold-brew.webp",
+    image: "images/refreshing-cold-brew.webp",
   },
   {
     id: 16,
@@ -256,7 +256,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🌹",
     desc: "Earl Grey base with rose water and cardamom cream foam",
     badge: "Signature",
-    image: "public/image/sparkling-cold-brew.png",
+    image: "images/sparkling-cold-brew.png",
   },
 
   // Recommended
@@ -270,7 +270,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🥥",
     desc: "Cold brew topped with luscious coconut sweet cream",
     badge: "⭐ Top Pick",
-    image: "public/image/cloud-puccino.png",
+    image: "images/cloud-puccino.png",
   },
   {
     id: 18,
@@ -282,7 +282,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🍯",
     desc: "Shaken espresso over ice with brown sugar syrup",
     badge: "⭐ Top Pick",
-    image: "public/image/crunchy-dirty.png",
+    image: "images/crunchy-dirty.png",
   },
   {
     id: 19,
@@ -294,7 +294,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🍃",
     desc: "Ceremonial matcha with tropical mango cold foam",
     badge: "⭐ Top Pick",
-    image: "public/image/dark-bliss-bomb.png",
+    image: "images/dark-bliss-bomb.png",
   },
   {
     id: 20,
@@ -306,7 +306,7 @@ export const BEVERAGES: Beverage[] = [
     emoji: "🧂",
     desc: "Salted caramel with espresso and steamed oat milk",
     badge: "⭐ Top Pick",
-    image: "public/image/nutellaferrero-latte.png",
+    image: "images/nutellaferrero-latte.png",
   },
 ];
 
